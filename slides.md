@@ -437,7 +437,7 @@ Know great developers:
 
 - In-person (JSConf Korea 2022)
 <!-- TODO: Add images -->
-<div class="flex gap-1 m-b-2">
+<!-- <div class="flex gap-1 m-b-2">
   <img src="/network/erick.jpg" class="object-cover" width="200" />
   <img src="/network/jeremy.jpg" class="object-cover" width="200" />
   <img src="/network/dwane.jpg" class="object-cover" width="300" />
@@ -449,7 +449,7 @@ Know great developers:
   <img src="/network/hj.jpg" class="object-cover" width="200" />
   <img src="/network/anu.jpg" class="object-cover" width="300" />
   <img src="/network/ellie.jpg" class="object-cover" width="300" />
-</div>
+</div> -->
 
 <!--
 - Erick Wendel
