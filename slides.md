@@ -12,11 +12,13 @@ info: |
 drawings:
   persist: false
 css: unocss
-title: How I got 1600 stars on GitHub in 2 months of Open Source work
+title: How to Build Your Own Open Source Project
+
 download: true
 ---
 
-# How I got 1600 stars on GitHub in 2 months of Open Source work
+# How to Build Your Own Open Source Project
+
 
 <!-- TODO:
 - Show slide number
@@ -53,9 +55,6 @@ If you haven't, I hope you will after my talk 😝.
 
 </v-click>
 
-<!--
-Raise your hands
--->
 
 ---
 layout: image-right
@@ -93,9 +92,57 @@ image: /hung.jpg
 
 # What is Jest Preview and why I built it?
 
+## Problem:
+<div grid="~ cols-2 gap-4">
+<div class="text-sm">
 
-<img src="/debug-terminal.png" width="600" class="mx-auto" />
+<v-click>
 
+- When you run a test, you only see the result in the terminal
+
+</v-click>
+
+<v-click>
+
+- You don't know what your app looks like when the test is running
+
+</v-click>
+
+<v-click>
+
+- It's very hard to debug a failed test: Very Longgg HTML
+
+</v-click>
+
+<v-click>
+
+
+<details><summary>Have you ever tried to click on a button, but there is no button, it's just the spinner is loading?
+</summary>
+  <video width="320" height="240" controls autoplay muted loop>
+    <source src="/problem-with-current-tests.mp4" type="video/mp4">
+  </video>
+  </details>
+  
+</v-click>
+
+<v-click>
+
+=> Question: If `jest` can print out the HTML, can we render it on a browser?
+
+</v-click>
+
+<v-click>
+
+=> Yes. We can!!
+
+</v-click>
+</div>
+  <div>
+    <img src="/debug-terminal.png" width="600" class="mx-auto" />
+  </div>
+
+</div>
 
 ---
 
@@ -104,7 +151,43 @@ image: /hung.jpg
 
 <img src="/jest-preview-demo.gif" width="600" class="mx-auto" />
 
+---
 
+# What is Jest Preview and why I built it?
+
+## Benefits of Jest Preview
+
+<div grid="~ cols-2 gap-4">
+<div>
+<v-click>
+
+- Debug a failed test easier
+
+</v-click>
+
+<v-click>
+
+- We can see what our app looks like, so the next testing steps are easily predictable => write test faster
+
+</v-click>
+
+<v-click>
+
+- Closing the gap between unit/ integration tests and e2e tests, but still fast in execution time
+
+</v-click>
+
+<v-click>
+
+=> My personal experience: I write tests 200-300% faster, thanks to jest-preview
+
+</v-click>
+</div>
+<div>
+  <img src="/jest-preview-demo.gif" width="600" class="mx-auto" />
+</div>
+
+</div>
 ---
 layout: iframe
 url: https://stackblitz.com/edit/jest-preview?embed=1&ctl=1&file=src%2FApp.test.tsx,README.md
@@ -188,7 +271,7 @@ image: https://source.unsplash.com/Md73pphIB-U/1920x1080
 
 <v-click>
 
-- Not really
+- Not really. For a small open source project, you might be the only maintainer
 
 </v-click>
 
@@ -214,7 +297,7 @@ image: https://source.unsplash.com/-8a5eJ1-mmQ/1920x1080
 
 <v-click>
 
-- Financially 💸
+- **Financially 💸**
 
 </v-click>
 
@@ -253,7 +336,7 @@ image: https://source.unsplash.com/-8a5eJ1-mmQ/1920x1080
 # What did I receive from doing open source software?
 
 
-- Knowledge. A lot of knowledge.
+- **Knowledge. A lot of knowledge.**
 
 <img src="/meme/knowledge.jpg" width="300" />
 
@@ -309,8 +392,7 @@ image: https://source.unsplash.com/-8a5eJ1-mmQ/1920x1080
 # What did I receive from doing open source software?
 
 
-Know great developers:
-
+**Know great developers:**
 
 - Twitter
 <div class="flex gap-1 m-b-2">
@@ -332,7 +414,7 @@ Know great developers:
 Know great developers:
 
 
-- In-person
+- In-person (CityJS Singapore 2022)
 
 <div class="flex gap-1 m-b-2">
   <img src="/network/maya.jpg" class="object-cover" width="200" />
@@ -340,16 +422,44 @@ Know great developers:
   <img src="/network/tan.jpg" class="object-cover" width="300" />
 </div>
 
-<v-click>
-
-- Amazing people at React Advanced 2022 ❤️
-
-</v-click>
-
 <!--
 - Maya Shivin
 - Tan Li Hau
 - Evan You
+-->
+
+---
+
+# What did I receive from doing open source software?
+
+
+**Know great developers:**
+
+- In-person (JSConf Korea 2022)
+<!-- TODO: Add images -->
+<div class="flex gap-1 m-b-2">
+  <img src="/network/erick.jpg" class="object-cover" width="200" />
+  <img src="/network/jeremy.jpg" class="object-cover" width="200" />
+  <img src="/network/dwane.jpg" class="object-cover" width="300" />
+  <img src="/network/jeong.jpg" class="object-cover" width="300" />
+</div>
+
+<div class="flex gap-1 m-b-2">
+  <img src="/network/nicolo.jpg" class="object-cover" width="200" />
+  <img src="/network/hj.jpg" class="object-cover" width="200" />
+  <img src="/network/anu.jpg" class="object-cover" width="300" />
+  <img src="/network/ellie.jpg" class="object-cover" width="300" />
+</div>
+
+<!--
+- Erick Wendel
+- Jeremy Wagner
+- Dwane Hemmings
+- Jeong Eun Lee
+- Nicolò
+- Hui Jing
+- Anu
+- Ellie
 -->
 
 ---
@@ -389,7 +499,7 @@ layout: center
 class: text-center
 ---
 
-# Some tips to start your OSS journey
+# Some tips to build your own open source project
 
 
 ---
@@ -407,10 +517,40 @@ class: text-center
 
 ---
 
+# Start simple
+
+<v-click>
+
+- No projects are complicated when it was created
+
+</v-click>
+
+<v-click>
+
+- Start simple. Just make an MVP/ PoC first. Then improve it overtime
+
+</v-click>
+
+<v-click>
+
+- It's okay if the code is not clean
+
+</v-click>
+
+<v-click>
+
+- If you get lost, it's OK. That's a sign that you are going to learn a ton
+
+</v-click>
+
+
+
+---
+
 # Find a maintainer
 
 
-<img src="https://pbs.twimg.com/media/FVxLXjtUYAESaYE?format=jpg&name=medium"  width="500"/>
+<img src="https://pbs.twimg.com/media/FVxLXjtUYAESaYE?format=jpg&name=medium" class="mx-auto" width="500"/>
 
 <!--
 - Building an OSS project is hard and stressful. 
@@ -418,14 +558,14 @@ class: text-center
 -->
 
 ---
-
+layout: image-right
+image: /glass-broken.jpg
+---
 # Do not start at 1.x
 
 - A new project is full of PoC and experiments
 - 1.x means your software must be backward compatible
 - Major version zero (0.y.z) is for initial development. Anything MAY change at any time. The public API SHOULD NOT be considered stable.
-
-<img src="/glass-broken.jpg" width="400" />
 
 
 ---
@@ -460,6 +600,16 @@ all I want is to preview the UI in Jest to Chrome 🖼. PERIOD. But the more I u
 Let’s ask your friends, your colleagues and your network what project should change to be more usable. 
 After a while when your project gets more attention, watch out for the Issues and Discussion tabs
 -->
+
+---
+
+# Monitor Issues and Pull Requests
+
+- You know your software is being used when people start to report issues and send pull requests
+- Have Issue and Pull Request templates
+- Reproduction is the most important one
+- Use labels, milestones, GitHub Actions
+
 
 ---
 
