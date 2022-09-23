@@ -1,0 +1,16 @@
+[build.environment]
+  NODE_VERSION = "16"
+  NPM_FLAGS = "--version" # prevent Netlify npm install
+
+[build]
+  publish = "dist"
+  command = "npx pnpm install --store=node_modules/.pnpm-store && npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Install via Netlify Plugins Directory
+# [[plugins]]
+#    package = "netlify-plugin-playwright-cache"
