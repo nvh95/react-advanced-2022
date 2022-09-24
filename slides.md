@@ -13,7 +13,6 @@ drawings:
   persist: false
 css: unocss
 title: How to Build Your Own Open Source Project
-
 download: true
 ---
 
@@ -27,8 +26,12 @@ download: true
 
 <div class="pt-13 relative">
   <div class="absolute px-2 py-1 rounded cursor-pointer right-0" hover="bg-white bg-opacity-10">
-    <div>https://twitter.com/hung_dev</div>
+    <a href="https://twitter.com/hung_dev" target="_blank">https://twitter.com/hung_dev</a>
+    <br />
+    <a href="https://github.com/nvh95/react-advanced-2022" target="_blank">https://github.com/nvh95/react-advanced-2022</a>
+
   </div>
+  
 </div>
 
 
@@ -72,6 +75,7 @@ image: /hung.jpg
   - <carbon-logo-twitter />: <a href="https://twitter.com/hung_dev" target="_blank">@hung_dev</a>
   - <carbon-logo-github />: <a href="https://github.com/nvh95" target="_blank">@nvh95</a>
   - 🔗: <a href="https://hung.dev" target="_blank">hung.dev</a>
+  - 📧: hi@hung.dev
 
 <!--
 - Jest Preview: give you a visual debugging experience when testing a frontend app
@@ -84,8 +88,7 @@ image: /hung.jpg
 - What is Jest Preview and why I built it?
 - What struggles do I have to overcome when building an OSS project?
 - What did I receive from doing OSS?
-- Some tips if you want to dip your toes into OSS.
-- Q&A
+- Some tips to build your own open source project.
 
 
 ---
@@ -144,12 +147,23 @@ image: /hung.jpg
 
 </div>
 
+<!--
+- if writeFE tests =>
+-->
+
 ---
 
 # What is Jest Preview and why I built it?
 
 
 <img src="/jest-preview-demo.gif" width="600" class="mx-auto" />
+
+<!--
+- this is test case written with react testing library 
+- user interaction is controlled by testing library user event
+- Instead of using screen.debug(), we use preview.debug() to screen the actual UI of our app in a browser
+- Whenever you hit Save, the browser update the new UI almost immediately
+-->
 
 ---
 
@@ -188,16 +202,25 @@ image: /hung.jpg
 </div>
 
 </div>
+
+
 ---
 layout: iframe
-url: https://stackblitz.com/edit/jest-preview?embed=1&ctl=1&file=src%2FApp.test.tsx,README.md
+url: >-
+  https://stackblitz.com/edit/jest-preview?embed=1&ctl=1&file=src%2FApp.test.tsx,README.md
 ---
+
 layout: center
 class: text-center
+
+
 ---
 
 # What struggles do I have to overcome when building an OSS project?
 
+<!--
+Take a closer look to see what struggles I had faced when building an OSS project
+-->
 
 ---
 
@@ -230,6 +253,14 @@ require('postcss-modules')({
 ```
 </v-click>
 
+<!--
+-Not only the user of a framework/ software => need to understand it deeply
+
+-it's like you cannot find an answer when you have a question while developing OSS
+
+
+-but it's a good chance for us to learn, whenver you overcome a hard problem
+-->
 
 ---
 layout: image-right
@@ -326,7 +357,6 @@ image: https://source.unsplash.com/-8a5eJ1-mmQ/1920x1080
 
 </v-click>
 
-
 <!--
 - do it for fun: OK, no problem
 -->
@@ -405,6 +435,12 @@ image: https://source.unsplash.com/-8a5eJ1-mmQ/1920x1080
 </div>
 <img src="/nw5.png" />
 
+<!--
+have chance to chat with many great engineers, authors of OSS libraries that I used every day. 
+
+
+Before doing OSS, I have never thought of one day I can discuss technical with them
+-->
 
 ---
 
@@ -423,6 +459,8 @@ Know great developers:
 </div>
 
 <!--
+Even better, meet in person
+
 - Maya Shivin
 - Tan Li Hau
 - Evan You
@@ -437,21 +475,26 @@ Know great developers:
 
 - In-person (JSConf Korea 2022)
 <!-- TODO: Add images -->
-<!-- <div class="flex gap-1 m-b-2">
-  <img src="/network/erick.jpg" class="object-cover" width="200" />
-  <img src="/network/jeremy.jpg" class="object-cover" width="200" />
-  <img src="/network/dwane.jpg" class="object-cover" width="300" />
-  <img src="/network/jeong.jpg" class="object-cover" width="300" />
+<div class="flex gap-1 m-b-2 h-40">
+  <img src="/network/jsconf/erick.jpeg" class="object-cover" width="100" />
+  <img src="/network/jsconf/dwane.jpeg" class="object-cover" width="100" />
+  <img src="/network/jsconf/jeremy.jpeg" class="object-cover" width="100" />
+  <img src="/network/jsconf/chuiyoung.jpg" class="object-cover" width="100" />
+  <img src="/network/jsconf/jane.jpeg" class="object-cover" width="100" />
+  <img src="/network/jsconf/anna.jpeg" class="object-cover" width="100" />
 </div>
 
-<div class="flex gap-1 m-b-2">
-  <img src="/network/nicolo.jpg" class="object-cover" width="200" />
-  <img src="/network/hj.jpg" class="object-cover" width="200" />
-  <img src="/network/anu.jpg" class="object-cover" width="300" />
-  <img src="/network/ellie.jpg" class="object-cover" width="300" />
-</div> -->
+<div class="flex gap-1 m-b-2 h-40">
+  <img src="/network/jsconf/nicolo.jpeg" class="object-cover" width="100" />
+  <img src="/network/jsconf/hj.jpeg" class="object-cover" width="100" />
+  <img src="/network/jsconf/sosun.jpg" class="object-cover" width="100" />
+  <img src="/network/jsconf/anu.jpeg" class="object-cover" width="100" />
+  <img src="/network/jsconf/ellie.jpeg" class="object-cover" width="100" />
+  <img src="/network/jsconf/sona.jpg" class="object-cover" width="100" />
+</div>
 
 <!--
+You might recognize some of them
 - Erick Wendel
 - Jeremy Wagner
 - Dwane Hemmings
@@ -460,6 +503,9 @@ Know great developers:
 - Hui Jing
 - Anu
 - Ellie
+- Sona
+- Shin Young
+- Sosun
 -->
 
 ---
@@ -513,11 +559,18 @@ class: text-center
 
 <!--
 - difficult to contribute to a project that you don't have context
+- just pick a project that you use every day
+- if you solve something, open source it. It does not need to be something big. 
+- Since you spend a lot of time on a particular problem, there is a high chance that other people have the same problem
 -->
 
 ---
+layout: image-right
+image: /simple.jpg
+---
 
 # Start simple
+
 
 <v-click>
 
@@ -544,7 +597,6 @@ class: text-center
 </v-click>
 
 
-
 ---
 
 # Find a maintainer
@@ -561,6 +613,7 @@ class: text-center
 layout: image-right
 image: /glass-broken.jpg
 ---
+
 # Do not start at 1.x
 
 - A new project is full of PoC and experiments
@@ -610,6 +663,11 @@ After a while when your project gets more attention, watch out for the Issues an
 - Reproduction is the most important one
 - Use labels, milestones, GitHub Actions
 
+<img src="/github-cover.jpeg" width="450" />
+
+<!--
+1.it's magic. how people with same problem find your project2.guide people how to category and filing efficiently
+-->
 
 ---
 
@@ -687,4 +745,4 @@ Q&A
 
 <p class="text-xs">Try <a href="https://github.com/nvh95/jest-preview" target="_blank">Jest Preview</a> and give it a star since it's free 😝</p>
 
-<small>Slides available at <a href="https://reactadvanced.hung.dev/" target="_blank">https://reactadvanced.hung.dev/</a></small>
+<small>Slides available (and open source) at <a href="https://reactadvanced.hung.dev/" target="_blank">https://reactadvanced.hung.dev/</a></small>
