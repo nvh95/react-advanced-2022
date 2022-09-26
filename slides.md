@@ -42,7 +42,9 @@ download: true
 </style>
 
 <!--
-The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
+Did you enjoy React Advanced so far.
+I love it
+In this talk, I will
 -->
 
 ---
@@ -78,8 +80,9 @@ image: /hung.jpg
   - 📧: hi@hung.dev
 
 <!--
-- Jest Preview: give you a visual debugging experience when testing a frontend app
+- Jest Preview: library gives you a visual debugging experience when testing a frontend app
 -bestofjs: website helps you follow the growth of javascript ecosystem
+- I am on twitter.
 -->
 
 ---
